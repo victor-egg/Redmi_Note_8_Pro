@@ -67,10 +67,10 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
         chmod -R 777 $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-        export PATH=$PATH:$GITHUB_WORKSPACE/kernel_workspace/aarch64-linux-android-4.9/bin
+        export PATH=$PATH:$GITHUB_WORKSPACE/kernel_workspace/bin
         export CROSS_COMPILE=aarch64-linux-android-
         mkdir ../out
-        make ARCH=arm64 O=../out kernel_defconfig
+        make ARCH=arm64 O=../out begonia_user_defconfig
         make ARCH=arm64 O=../out -j$(nproc --all)
 
     - name: 打包kernel镜像
