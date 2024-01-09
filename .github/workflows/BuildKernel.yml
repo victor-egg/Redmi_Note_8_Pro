@@ -34,7 +34,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         wget -O aarch64-linux-android-4.9.tar.gz https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+archive/043dc0ad16a73e0e1973132d00fa6265ab4fa6ba.tar.gz
-        tar -zxvf aarch64-linux-android-4.9.tar.gz -C ./aarch64-linux-android-4.9
+        tar -zxvf aarch64-linux-android-4.9.tar.gz
         cd aarch64-linux-android-4.9 || ls -al
         
     - name: 下载额外工具
